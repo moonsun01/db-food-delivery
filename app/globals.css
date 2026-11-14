@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/*
+ * 디자인 토큰 — README "디자인 규칙" 참고
+ * Tailwind 기본색(orange-500 등) 대신 아래 토큰만 사용한다.
+ */
+@theme {
+  --font-sans: var(--font-pretendard), -apple-system, "Apple SD Gothic Neo", sans-serif;
+
+  /* 글자 크기 */
+  --text-body: 15px;
+  --text-body--line-height: 1.5;
+  --text-caption: 13px;
+  --text-caption--line-height: 1.45;
+  --text-tab: 11px;
+  --text-tab--line-height: 1.2;
+
+  /* 주색 — 한 화면에 한두 군데만 */
+  --color-brand: #e2462b;
+  --color-brand-hover: #c93a21;
+  --color-brand-subtle: #fdf0ec;
+
+  /* 글자·선·배경 (따뜻한 회색) */
+  --color-ink: #1c1a17;
+  --color-ink-2: #57524b;
+  --color-ink-3: #8c867d;
+  --color-line: #e6e2dc;
+  --color-canvas: #f6f4f1;
+  --color-fill: #efece8;
+
+  /* 상태 톤 (글자 / 배경) */
+  --color-waiting: #9a5b0b;
+  --color-waiting-bg: #fbf1e1;
+  --color-progress: #1d5fa6;
+  --color-progress-bg: #e8f0fa;
+  --color-success: #1f7a4d;
+  --color-success-bg: #e6f4ec;
+  --color-danger: #b42318;
+  --color-danger-bg: #fdecea;
+  --color-neutral: #57524b;
+  --color-neutral-bg: #efece8;
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-canvas text-body text-ink antialiased;
+  }
+  /* iOS 입력 시 자동 확대 방지: 입력창은 16px 이상 */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
