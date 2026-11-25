@@ -1,0 +1,23 @@
+{
+  "name": "delivery",
+  "version": "0.5.0",
+  "description": "Delivery app backend matching frontend API specification v0.5",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "db:check": "node check-db.js",
+    "test": "node --test test/*.test.js",
+    "dev:setup": "node scripts/setup-dev.js",
+    "demo": "node scripts/demo-flow.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "bcryptjs": "^3.0.3"
+  }
+}
